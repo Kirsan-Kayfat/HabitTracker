@@ -66,6 +66,6 @@
         android:id="@+id/habits_container_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_habit_value" />
+        tools:listitem="@layout/item_habit_check" />
 
 </LinearLayout>
