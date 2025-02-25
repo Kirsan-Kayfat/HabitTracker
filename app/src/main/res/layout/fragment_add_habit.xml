@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".presentation.AddHabitFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_grey"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="@string/add_habit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_xxlarge"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="@dimen/margin_tiny"
+            android:background="@drawable/rounded_corners_button"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/habit_name_til"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:hint="@string/habit_name"
+        android:textColorHint="@color/white"
+        app:expandedHintEnabled="false"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toStartOf="@id/color_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:placeholderText="@string/example_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/habit_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/color_name"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="@dimen/view_wight"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:background="@drawable/rounded_corners_button"
+        android:backgroundTint="@color/very_light_grey"
+        android:contentDescription="@string/habit_color"
+        app:layout_constraintBottom_toBottomOf="@+id/habit_name_til"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/habit_name_til"
+        app:layout_constraintTop_toTopOf="@id/habit_name_til" />
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_tiny"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintTop_toTopOf="@id/value1"
+        app:layout_constraintEnd_toStartOf="@id/color1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/value1" />
+
+    <ImageView
+        android:id="@+id/color1"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="@dimen/view_wight"
+        android:layout_margin="@dimen/margin_tiny"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/very_light_grey"
+        android:contentDescription="@string/habit_color"
+        app:layout_constraintBottom_toBottomOf="@id/value1"
+        app:layout_constraintEnd_toStartOf="@id/value1"
+        app:layout_constraintStart_toEndOf="@id/checkbox1"
+        app:layout_constraintTop_toTopOf="@id/value1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:hint="Value 1"
+        android:textColorHint="@color/white"
+        app:expandedHintEnabled="false"
+        app:hintEnabled="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/color1"
+        app:layout_constraintTop_toBottomOf="@id/habit_name_til"
+        app:placeholderText="@string/example_value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value1_ed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_tiny"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintTop_toTopOf="@id/value2"
+        app:layout_constraintEnd_toStartOf="@id/color2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/value2" />
+
+    <ImageView
+        android:id="@+id/color2"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="@dimen/view_wight"
+        android:layout_margin="@dimen/margin_tiny"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/very_light_grey"
+        android:contentDescription="@string/habit_color"
+        app:layout_constraintBottom_toBottomOf="@id/value2"
+        app:layout_constraintEnd_toStartOf="@id/value2"
+        app:layout_constraintStart_toEndOf="@id/checkbox2"
+        app:layout_constraintTop_toTopOf="@id/value2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:hint="Value 2"
+        android:textColorHint="@color/white"
+        app:expandedHintEnabled="false"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/color2"
+        app:layout_constraintTop_toBottomOf="@id/value1"
+        app:placeholderText="@string/example_value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value2_ed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_tiny"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintTop_toTopOf="@id/value3"
+        app:layout_constraintEnd_toStartOf="@id/color3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/value3" />
+
+    <ImageView
+        android:id="@+id/color3"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="@dimen/view_wight"
+        android:layout_margin="@dimen/margin_tiny"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/very_light_grey"
+        android:contentDescription="@string/habit_color"
+        app:layout_constraintBottom_toBottomOf="@id/value3"
+        app:layout_constraintEnd_toStartOf="@id/value3"
+        app:layout_constraintStart_toEndOf="@id/checkbox3"
+        app:layout_constraintTop_toTopOf="@id/value3" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:hint="Value 3"
+        android:textColorHint="@color/white"
+        app:expandedHintEnabled="false"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/color3"
+        app:layout_constraintTop_toBottomOf="@id/value2"
+        app:placeholderText="@string/example_value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value3_ed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_tiny"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintTop_toTopOf="@id/value4"
+        app:layout_constraintEnd_toStartOf="@id/color4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/value4" />
+
+    <ImageView
+        android:id="@+id/color4"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="@dimen/view_wight"
+        android:layout_margin="@dimen/margin_tiny"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/very_light_grey"
+        android:contentDescription="@string/habit_color"
+        app:layout_constraintBottom_toBottomOf="@id/value4"
+        app:layout_constraintEnd_toStartOf="@id/value4"
+        app:layout_constraintStart_toEndOf="@id/checkbox4"
+        app:layout_constraintTop_toTopOf="@id/value4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:hint="Value 4"
+        android:textColorHint="@color/white"
+        app:expandedHintEnabled="false"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/color4"
+        app:layout_constraintTop_toBottomOf="@id/value3"
+        app:placeholderText="@string/example_value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value4_ed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_tiny"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintTop_toTopOf="@id/value5"
+        app:layout_constraintEnd_toStartOf="@id/color5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/value5" />
+
+    <ImageView
+        android:id="@+id/color5"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="@dimen/view_wight"
+        android:layout_margin="@dimen/margin_tiny"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/very_light_grey"
+        android:contentDescription="@string/habit_color"
+        app:layout_constraintBottom_toBottomOf="@id/value5"
+        app:layout_constraintEnd_toStartOf="@id/value5"
+        app:layout_constraintStart_toEndOf="@id/checkbox5"
+        app:layout_constraintTop_toTopOf="@id/value5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:hint="Value 5"
+        android:textColorHint="@color/white"
+        app:expandedHintEnabled="false"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/color5"
+        app:layout_constraintTop_toBottomOf="@id/value4"
+        app:placeholderText="@string/example_value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value5_ed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

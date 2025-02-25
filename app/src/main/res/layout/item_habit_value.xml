@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_height"
+    android:layout_marginStart="@dimen/margin_tiny"
+    android:layout_marginTop="@dimen/margin_tiny"
+    android:layout_marginEnd="@dimen/margin_tiny"
+    android:background="@drawable/rounded_corners"
+    android:padding="@dimen/padding_tiny">
+
+    <TextView
+        android:id="@+id/habit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/padding_tiny"
+        android:textColor="@color/very_light_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Inversion table 1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="120dp" />
+
+    <TextView
+        android:id="@+id/value1"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@id/value1_name"
+        app:layout_constraintEnd_toStartOf="@id/value2"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22:30" />
+
+    <TextView
+        android:id="@+id/value1_name"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/value1"
+        app:layout_constraintStart_toStartOf="@id/value1"
+        app:layout_constraintTop_toBottomOf="@id/value1"
+        tools:text="hours" />
+
+    <TextView
+        android:id="@+id/value2"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@id/value2_name"
+        app:layout_constraintEnd_toStartOf="@id/value3"
+        app:layout_constraintStart_toEndOf="@id/value1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22:30" />
+
+    <TextView
+        android:id="@+id/value2_name"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/value2"
+        app:layout_constraintStart_toStartOf="@id/value2"
+        app:layout_constraintTop_toBottomOf="@id/value2"
+        tools:text="hours" />
+
+    <TextView
+        android:id="@+id/value3"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@id/value3_name"
+        app:layout_constraintEnd_toStartOf="@id/value4"
+        app:layout_constraintStart_toEndOf="@id/value2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22:30" />
+
+    <TextView
+        android:id="@+id/value3_name"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/value3"
+        app:layout_constraintStart_toStartOf="@id/value3"
+        app:layout_constraintTop_toBottomOf="@id/value3"
+        tools:text="hours" />
+
+    <TextView
+        android:id="@+id/value4"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@id/value4_name"
+        app:layout_constraintEnd_toStartOf="@id/value5"
+        app:layout_constraintStart_toEndOf="@id/value3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22:30" />
+
+    <TextView
+        android:id="@+id/value4_name"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/value4"
+        app:layout_constraintStart_toStartOf="@id/value4"
+        app:layout_constraintTop_toBottomOf="@id/value4"
+        tools:text="hours" />
+
+    <TextView
+        android:id="@+id/value5"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@id/value5_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/value4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22:30" />
+
+    <TextView
+        android:id="@+id/value5_name"
+        android:layout_width="@dimen/view_wight"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/value5"
+        app:layout_constraintStart_toStartOf="@id/value5"
+        app:layout_constraintTop_toBottomOf="@id/value5"
+        tools:text="hours" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

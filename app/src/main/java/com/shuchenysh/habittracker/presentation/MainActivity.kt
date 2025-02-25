@@ -1,7 +1,8 @@
-package com.shuchenysh.habittracker
+package com.shuchenysh.habittracker.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.shuchenysh.habittracker.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
